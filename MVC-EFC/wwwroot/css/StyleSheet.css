@@ -1,0 +1,46 @@
+﻿body {
+    background-color: turquoise;
+}
+
+.HeaderText {
+    color: white;
+}
+
+.OddString {
+    background-color: GreenYellow;
+}
+
+.EvenString {
+    background-color: LawnGreen;
+}
+
+.button {
+    border-radius: 5px;
+    background-color: mediumorchid;
+    cursor: pointer;
+    border-color: white transparent;
+}
+
+tr {
+    height: 50px;
+}
+
+th {
+    width: 15%;
+}
+
+.thId {
+    width: 10%;
+}
+
+td {
+    width: 15%;
+}
+
+.tdId {
+    width: 10%;
+}
+
+.thColspan {
+    width: 30%;
+}

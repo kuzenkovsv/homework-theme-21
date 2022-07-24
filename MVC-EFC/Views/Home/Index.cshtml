@@ -1,0 +1,36 @@
+﻿@using PhoneBookEntitiesLib
+@{
+    ViewData["Title"] = "Телефонные книжки";
+}
+<h2>База телефонных книжек</h2>
+
+<div style="align-content:center;">
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr bgcolor="Black" class="HeaderText">
+            <th class="thId" align="center">№</th>
+            <th align="center">Владелец</th>
+            <th align="center">Действие</th>
+        </tr>
+        @foreach (PhoneBook phoneBook in ViewBag.PhoneBooks)
+        {
+            <tr class="EvenString">
+                <td align="center">
+                    @phoneBook.PhoneBookID
+                </td>
+                <td>@phoneBook.OwnerPhoneBook</td>
+                <td align="center">
+                    <a asp-controller="Home"
+                   asp-action="SomePhoneBook"
+                   asp-route-id="@phoneBook.PhoneBookID">
+                        <input class="button" type="button" value="Посмотреть" />
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+
+    <a href="/Home/AddPhoneBook">
+        <input class="button" type="button" value="Добавить новую" />
+    </a>
+</div>

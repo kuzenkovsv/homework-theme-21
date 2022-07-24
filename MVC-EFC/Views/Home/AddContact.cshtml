@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Добавление контакта";
+}
+<div>
+    <form action="~/Home/ContGetDataFromViewField" method="post">
+        <input type="hidden" name="PhoneBookID" value="@Model.IdPhBook" readonly/><br />
+        <label>Фамилия</label><br />
+        <input type="text" name="Surname" value="" required/><br />
+        <label>Имя</label><br />
+        <input type="text" name="Name" value="" required/><br />
+        <label>Отчество</label><br />
+        <input type="text" name="MiddleName" value="" required/><br />
+        <label>Номер телефона</label><br />
+        <input type="number" name="PhoneNumber" value="" required/><br />
+        <label>Адрес</label><br />
+        <input type="text" name="Address" value="" /><br />
+        <label>Описание</label><br />
+        <input type="text" name="Description" value="" /><br />
+        <p><input class="button" type="submit" value="Добавить" /></p>
+    </form>
+</div>

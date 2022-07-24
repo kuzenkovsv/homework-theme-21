@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        @RenderBody()
+        <footer>
+            <hr />
+            <a href="/Home/Index">
+                <input class="button" type="button" value="Вернуться на главную" />
+            </a>
+            <p>Сегодня: @DateTime.Now.ToString("dddd, dd MMMM yyyy")</p>
+            <p>Copyright &copy; 2022 - @ViewBag.Title</p>
+        </footer>
+    </div>
+</body>
+</html>
